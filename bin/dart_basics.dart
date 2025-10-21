@@ -4,8 +4,6 @@ void main() {
   bool bandera = false;
   var mensaje = "El acumulado es: ";
 
-
-
   while(bandera == false){
     acumulated += incremento;
 
@@ -20,14 +18,11 @@ void main() {
   for (final object in flybyObjects) {
     print(object);
   }
-  
-  int fibonacci(int n) {
+
+    print(fibonacci(10));
+}
+
+int fibonacci(int n) {
     if (n == 0 || n == 1) return n;
     return fibonacci(n - 1) + fibonacci(n - 2);
   }
-  print(fibonacci(10));
-  
-
-}
-
-print(fibonacci(10));
