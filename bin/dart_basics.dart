@@ -20,8 +20,14 @@ void main() {
   for (final object in flybyObjects) {
     print(object);
   }
-
-  final variableFinal = 4;
-  //variableFinal = 3;
+  
+  int fibonacci(int n) {
+    if (n == 0 || n == 1) return n;
+    return fibonacci(n - 1) + fibonacci(n - 2);
+  }
+  print(fibonacci(10));
+  
 
 }
+
+print(fibonacci(10));
