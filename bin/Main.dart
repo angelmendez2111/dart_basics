@@ -2,14 +2,7 @@ import 'dart:ffi';
 import 'dart:io';
 
 void main() {
-
-  //LISTAS
-  //var flybyObjects = ['Jupiter', 'Saturn', 'Uranus', 'Neptune'];
-  //flybyObjects.where((name) => name.contains('turn')).forEach(print);
-
-  //List list = ['1', '2', '3', '4', '5'];
-  //list.where((position) => position == '3').forEach(print);
-
+  print('hola mundo');
 
   //CAPTURAR DATOS STRING
   print("ingrese su nombre: ");
@@ -26,8 +19,4 @@ void main() {
   print("la suma de los números $numero1 y $numero2 es: $resultado");
 
   print('fin del programa');
-}
-
-double suma(double numero1, double numero2){
-  return numero1 + numero2;
 }
