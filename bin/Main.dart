@@ -3,7 +3,6 @@ import 'dart:io';
 
 void main() {
   print('hola mundo');
-
   //CAPTURAR DATOS STRING
   print("ingrese su nombre: ");
   String nombre = stdin.readLineSync().toString();
@@ -19,4 +18,8 @@ void main() {
   print("la suma de los números $numero1 y $numero2 es: $resultado");
 
   print('fin del programa');
+}
+
+double suma(double a, double b) {
+  return a + b;
 }
