@@ -1,35 +1,48 @@
-class Task {
-  String title;
-  String description;
-  DateTime createdAt;
-  bool isCompleted;
+class Task{
+  final String title;
+  final String description;
 
-  Task(this.title, this.description)
-      : createdAt = DateTime.now(),
-        isCompleted = false;
+  /// Constructor generativo con asignación abreviada
+  Task(this.title, this.description);
 
-
-  void completeTask(){
-    isCompleted = true;
-  }
-  bool isOverdue(){
-    //A task is overdue if more than 7 days have passed since createAt.
-    return createdAt!.isBefore(DateTime.now().subtract(Duration(days: 7)));
-  }
-  void printInfo(){
-    //print all the info of a task
-    print("Task: $title");
-    print("Description: $description");
-    print("Created at: $createdAt");
-    print("Is completed: $isCompleted");
-  }
 }
 
 void main(){
-  List<Task> tasks = [];
-  tasks.add(Task("Study Dart", "Practice POO"));
-  tasks[0].completeTask();
 
+  /// Legibilidad baja
+  Task universityTask = Task("Study flutter", "Learn POO");
+  print(universityTask.title);
+  print(universityTask.description);
 
+  /// Legibilidad alta
+  User developer = User(
+    name: 'Angel',
+    lastName: 'Mendez',
+    birthYear: 2001,
+  );
+
+  print('${developer.name} ${developer.lastName}');
+  print(developer.age);
+
+  User basicUser = User.basic(name: 'Piero',
+    lastName: 'Quiñones',
+    age: 2001,);
+
+  print(basicUser.name);
+  print(basicUser.lastName);
+  print(basicUser.age);
 
 }
+
+class User{
+  final String name;
+  final String lastName;
+  final int age;
+
+  /// Constructor con initializer list
+  User({required this.name, required this.lastName, required int birthYear}) : age = DateTime.now().year - birthYear;
+
+  User.basic({required this.name, required this.lastName, required this.age});
+
+}
+
